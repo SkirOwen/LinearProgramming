@@ -62,4 +62,4 @@ if __name__ == "__main__":
 	lp = LP("max", "2*x+y", ["x-3*y<=5", "2*x-5*y>=10"])
 	print(lp.A)
 	print("b = ", lp.b)
-	print(lp.C)
+	print("C =", lp.C)
