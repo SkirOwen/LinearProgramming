@@ -1,5 +1,5 @@
 from imports import *
-# TODO: implement 2x = 2*x ???????
+# TODO: improve 2x = 2*x and make it for C
 
 
 class LP:
@@ -39,12 +39,16 @@ class LP:
 				bias = 1
 				if equation[k] == ">":
 					scalar = -1
-			try:
-				rhs = sp.sympify(equation[:k - bias])
-				lhs = sp.sympify(equation[k + bias:])
-			except sp.SympifyError:
-				print("Try writing without implied multiplication, '2*x' instead of '2x'")
-				raise
+			while True:
+				try:
+					rhs = sp.sympify(equation[:k - bias])
+					lhs = sp.sympify(equation[k + bias:])
+					break
+				except sp.SympifyError:
+					for i in range(1, len(equation)):
+						if equation[i] in string.ascii_letters and not equation[i-1] == "*":
+							equation = equation[:i] + "*" + equation[i:]
+							bias += 1
 			p_form.append((rhs - lhs) * scalar)
 		return p_form
 	
@@ -59,7 +63,7 @@ class LP:
 		
 
 if __name__ == "__main__":
-	lp = LP("max", "2*x+y", ["x-3*y<=5", "2*x-5*y>=10"])
+	lp = LP("max", "2*x+y", ["x-3y<=5", "2*x-5*y>=10"])
 	print(lp.A)
 	print("b = ", lp.b)
 	print("C =", lp.C)
