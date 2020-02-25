@@ -1,5 +1,5 @@
 from imports import *
-# TODO: improve 2x = 2*x and make it for C
+import time
 
 
 class LP:
@@ -11,7 +11,12 @@ class LP:
 			chars = sp.symbols('x0:{}'.format(dim))
 			
 		constraints = self.programming_form(constraints)
-		function = sp.sympify(function)
+		while True:
+			try:
+				function = sp.sympify(function)
+				break
+			except sp.SympifyError:
+				self.implied_multiplication(function)
 		
 		self.A, self.b = sp.linear_eq_to_matrix(constraints, chars)
 		self.C = np.array(sp.linear_eq_to_matrix([function], chars)[0]).astype(np.float64)
@@ -39,16 +44,16 @@ class LP:
 				bias = 1
 				if equation[k] == ">":
 					scalar = -1
+			rhs = equation[:k - bias]
+			lhs = equation[k + bias:]
 			while True:
 				try:
-					rhs = sp.sympify(equation[:k - bias])
-					lhs = sp.sympify(equation[k + bias:])
+					rhs = sp.sympify(rhs)
+					lhs = sp.sympify(lhs)
 					break
 				except sp.SympifyError:
-					for i in range(1, len(equation)):
-						if equation[i] in string.ascii_letters and not equation[i-1] == "*":
-							equation = equation[:i] + "*" + equation[i:]
-							bias += 1
+					rhs = LP.implied_multiplication(rhs)
+					bias += 1
 			p_form.append((rhs - lhs) * scalar)
 		return p_form
 	
@@ -60,10 +65,19 @@ class LP:
 				if equation[i] in ["+", "-"]:
 					dim[j] += 1
 		return max(dim)
+	
+	@staticmethod
+	def implied_multiplication(equation):
+		for i in range(1, len(equation)):
+			if equation[i] in string.ascii_letters and equation[i - 1] != "*":
+				equation = equation[:i] + "*" + equation[i:]
+		return equation
 		
 
 if __name__ == "__main__":
+	start_time = time.time()
 	lp = LP("max", "2*x+y", ["x-3y<=5", "2*x-5*y>=10"])
 	print(lp.A)
 	print("b = ", lp.b)
 	print("C =", lp.C)
+	print("--- %s seconds ---" % (time.time() - start_time))
