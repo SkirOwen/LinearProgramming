@@ -1,3 +1,5 @@
+import lp
+
 import inspect
 import itertools as it
 import numpy as np
@@ -9,3 +11,4 @@ import string
 import sys
 import math
 import sympy as sp
+from scipy.optimize import linprog

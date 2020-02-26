@@ -24,14 +24,18 @@ class LP:
 		if minmax == "max":
 			self.C = self.C[0] * -1
 		
-		self.A = np.column_stack((np.array(self.A).astype(np.float64), np.eye(dim)))
-		self.b = np.array(self.b).astype(np.float64)
+		self.A = np.array(self.A).astype(np.float64)
+		self.b = np.array(self.b).astype(np.float64).T
 		
 		# self.base
 		# self.nbase
 		# self.cb
 		# self.cn
-		
+	
+	def simplex_solver(self):
+		res = linprog(self.C, A_ub=self.A, b_ub=self.b, bounds=(0, None))
+		return res
+	
 	@staticmethod
 	def programming_form(equations):
 		p_form = []
@@ -72,12 +76,35 @@ class LP:
 			if equation[i] in string.ascii_letters and equation[i - 1] != "*":
 				equation = equation[:i] + "*" + equation[i:]
 		return equation
-		
+	
+	
+class KleeMinty:
+	def __init__(self, n, minmax="max", **kwargs):
+		self.minmax = minmax
+		self.function = self.get_function_km(n)
+		self.constraints = self.get_constraints_km(n)
+	
+	@staticmethod
+	def get_function_km(n):
+		function = [0 for i in range(n)]
+		for j in range(1, n+1):
+			function[j-1] += 10**(n-j)
+		return function
+	
+	@staticmethod
+	def get_constraints_km(self, n):
+		# TODO: to string and b
+		constraints = [[0 for j in range(n)] for i in range(n)]
+		for i in range(1, n+1):
+			# calculate each constraints now
+			for j in range(1, i):
+				constraints[i][j] = 2 * (constraints[i][j] + 10**(i-j)) + 1
+		return constraints
+	
 
 if __name__ == "__main__":
 	start_time = time.time()
-	lp = LP("max", "2*x+y", ["x-3y<=5", "2*x-5*y>=10"])
-	print(lp.A)
-	print("b = ", lp.b)
-	print("C =", lp.C)
+	lp = LP("max", "x+y", ["x+2*y<=2", "3*x+y<=3/2"])
 	print("--- %s seconds ---" % (time.time() - start_time))
+	res = lp.simplex_solver()
+	print('Optimal value:', res.fun, '\nX:', res.x)
