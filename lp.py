@@ -81,30 +81,46 @@ class LP:
 class KleeMinty:
 	def __init__(self, n, minmax="max", **kwargs):
 		self.minmax = minmax
-		self.function = self.get_function_km(n)
-		self.constraints = self.get_constraints_km(n)
+		self.C = self.get_function_km(n)
+		self.A, self.b = self.get_constraints_km(n)
 	
 	@staticmethod
 	def get_function_km(n):
 		function = [0 for i in range(n)]
 		for j in range(1, n+1):
-			function[j-1] += 10**(n-j)
-		return function
+			function[j-1] -= 10**(n-j)
+		return np.array(function)
 	
 	@staticmethod
-	def get_constraints_km(self, n):
-		# TODO: to string and b
+	def get_constraints_km(n):
 		constraints = [[0 for j in range(n)] for i in range(n)]
-		for i in range(1, n+1):
+		b = []
+		for i in range(1, n+1):     # i for 1..n
 			# calculate each constraints now
-			for j in range(1, i):
-				constraints[i][j] = 2 * (constraints[i][j] + 10**(i-j)) + 1
-		return constraints
+			for j in range(1, i):   # j for 1..i-1
+				constraints[i-1][j-1] = 2 * (constraints[i-1][j-1] + 10**(i-j))
+			constraints[i-1][i-1] += 1
+			b.append(100**(i-1))
+		return np.array(constraints), np.array(b)
+	
+	def pdata(self):
+		return self.A, self.b, self.C
+	
+	def solve(self):
+		return LP.simplex_solver(self)
 	
 
 if __name__ == "__main__":
+	print(KleeMinty(3).pdata())
+	start_time = time.time()
+	res = KleeMinty(3).solve()
+	print("--- %s seconds ---" % (time.time() - start_time))
+	print(res)
+	print('Optimal value:', res.fun, '\nX:', res.x)
+	'''
 	start_time = time.time()
 	lp = LP("max", "x+y", ["x+2*y<=2", "3*x+y<=3/2"])
 	print("--- %s seconds ---" % (time.time() - start_time))
 	res = lp.simplex_solver()
 	print('Optimal value:', res.fun, '\nX:', res.x)
+	'''

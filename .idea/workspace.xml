@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="91185a7f-9d35-40b3-ab64-e7123247b020" name="Default Changelist" comment="implement implicit multiplication for A and b&#10;time the class">
-      <change afterPath="$PROJECT_DIR$/Simplex.py" afterDir="false" />
+    <list default="true" id="91185a7f-9d35-40b3-ab64-e7123247b020" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imports.py" beforeDir="false" afterPath="$PROJECT_DIR$/imports.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lp.py" beforeDir="false" afterPath="$PROJECT_DIR$/lp.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -118,7 +116,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582672867869</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="simplex plus creation of Klee Minty">
+      <created>1582727444355</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1582727444355</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -135,7 +140,8 @@
     <MESSAGE value="test" />
     <MESSAGE value="implement implicit multiplication for A and b" />
     <MESSAGE value="implement implicit multiplication for A and b&#10;time the class" />
-    <option name="LAST_COMMIT_MESSAGE" value="implement implicit multiplication for A and b&#10;time the class" />
+    <MESSAGE value="simplex plus creation of Klee Minty" />
+    <option name="LAST_COMMIT_MESSAGE" value="simplex plus creation of Klee Minty" />
   </component>
   <component name="WindowStateProjectService">
     <state x="313" y="55" width="810" height="692" key="#Python" timestamp="1582372528392">
@@ -146,46 +152,50 @@
       <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state x="176" y="48" width="1084" height="720" key="#com.intellij.execution.impl.EditConfigurationsDialog/70.27.1296.741@70.27.1296.741" timestamp="1582223155868" />
-    <state x="322" y="27" width="782" height="741" key="CommitChangelistDialog2" timestamp="1582720291016">
+    <state x="322" y="27" width="782" height="741" key="CommitChangelistDialog2" timestamp="1582727443457">
       <screen x="70" y="27" width="1296" height="741" />
     </state>
-    <state x="322" y="27" width="782" height="741" key="CommitChangelistDialog2/70.27.1296.741@70.27.1296.741" timestamp="1582720291016" />
+    <state x="322" y="27" width="782" height="741" key="CommitChangelistDialog2/70.27.1296.741@70.27.1296.741" timestamp="1582727443457" />
+    <state width="731" height="540" key="DebuggerActiveHint" timestamp="1582912018047">
+      <screen x="70" y="27" width="1296" height="741" />
+    </state>
+    <state width="731" height="540" key="DebuggerActiveHint/70.27.1296.741@70.27.1296.741" timestamp="1582912018047" />
     <state x="170" y="127" width="1096" height="541" key="DiffContextDialog" timestamp="1582672928903">
       <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state x="170" y="127" width="1096" height="541" key="DiffContextDialog/70.27.1296.741@70.27.1296.741" timestamp="1582672928903" />
-    <state width="1250" height="172" key="GridCell.Tab.0.bottom" timestamp="1582724855948">
+    <state width="1250" height="172" key="GridCell.Tab.0.bottom" timestamp="1582912799534">
       <screen x="70" y="27" width="1296" height="741" />
     </state>
-    <state width="1250" height="172" key="GridCell.Tab.0.bottom/70.27.1296.741@70.27.1296.741" timestamp="1582724855948" />
-    <state width="1250" height="172" key="GridCell.Tab.0.center" timestamp="1582724855946">
+    <state width="1250" height="172" key="GridCell.Tab.0.bottom/70.27.1296.741@70.27.1296.741" timestamp="1582912799534" />
+    <state width="1250" height="172" key="GridCell.Tab.0.center" timestamp="1582912799533">
       <screen x="70" y="27" width="1296" height="741" />
     </state>
-    <state width="1250" height="172" key="GridCell.Tab.0.center/70.27.1296.741@70.27.1296.741" timestamp="1582724855946" />
-    <state width="1250" height="172" key="GridCell.Tab.0.left" timestamp="1582724855945">
+    <state width="1250" height="172" key="GridCell.Tab.0.center/70.27.1296.741@70.27.1296.741" timestamp="1582912799533" />
+    <state width="1250" height="172" key="GridCell.Tab.0.left" timestamp="1582912799533">
       <screen x="70" y="27" width="1296" height="741" />
     </state>
-    <state width="1250" height="172" key="GridCell.Tab.0.left/70.27.1296.741@70.27.1296.741" timestamp="1582724855945" />
-    <state width="1250" height="172" key="GridCell.Tab.0.right" timestamp="1582724855947">
+    <state width="1250" height="172" key="GridCell.Tab.0.left/70.27.1296.741@70.27.1296.741" timestamp="1582912799533" />
+    <state width="1250" height="172" key="GridCell.Tab.0.right" timestamp="1582912799533">
       <screen x="70" y="27" width="1296" height="741" />
     </state>
-    <state width="1250" height="172" key="GridCell.Tab.0.right/70.27.1296.741@70.27.1296.741" timestamp="1582724855947" />
-    <state width="1250" height="215" key="GridCell.Tab.1.bottom" timestamp="1582723869727">
+    <state width="1250" height="172" key="GridCell.Tab.0.right/70.27.1296.741@70.27.1296.741" timestamp="1582912799533" />
+    <state width="1250" height="215" key="GridCell.Tab.1.bottom" timestamp="1582912057478">
       <screen x="70" y="27" width="1296" height="741" />
     </state>
-    <state width="1250" height="215" key="GridCell.Tab.1.bottom/70.27.1296.741@70.27.1296.741" timestamp="1582723869727" />
-    <state width="1250" height="215" key="GridCell.Tab.1.center" timestamp="1582723869726">
+    <state width="1250" height="215" key="GridCell.Tab.1.bottom/70.27.1296.741@70.27.1296.741" timestamp="1582912057478" />
+    <state width="1250" height="215" key="GridCell.Tab.1.center" timestamp="1582912057473">
       <screen x="70" y="27" width="1296" height="741" />
     </state>
-    <state width="1250" height="215" key="GridCell.Tab.1.center/70.27.1296.741@70.27.1296.741" timestamp="1582723869726" />
-    <state width="1250" height="215" key="GridCell.Tab.1.left" timestamp="1582723869726">
+    <state width="1250" height="215" key="GridCell.Tab.1.center/70.27.1296.741@70.27.1296.741" timestamp="1582912057473" />
+    <state width="1250" height="215" key="GridCell.Tab.1.left" timestamp="1582912057470">
       <screen x="70" y="27" width="1296" height="741" />
     </state>
-    <state width="1250" height="215" key="GridCell.Tab.1.left/70.27.1296.741@70.27.1296.741" timestamp="1582723869726" />
-    <state width="1250" height="215" key="GridCell.Tab.1.right" timestamp="1582723869726">
+    <state width="1250" height="215" key="GridCell.Tab.1.left/70.27.1296.741@70.27.1296.741" timestamp="1582912057470" />
+    <state width="1250" height="215" key="GridCell.Tab.1.right" timestamp="1582912057476">
       <screen x="70" y="27" width="1296" height="741" />
     </state>
-    <state width="1250" height="215" key="GridCell.Tab.1.right/70.27.1296.741@70.27.1296.741" timestamp="1582723869726" />
+    <state width="1250" height="215" key="GridCell.Tab.1.right/70.27.1296.741@70.27.1296.741" timestamp="1582912057476" />
     <state x="207" y="31" width="1022" height="737" key="SettingsEditor" timestamp="1582723125322">
       <screen x="70" y="27" width="1296" height="741" />
     </state>
