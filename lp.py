@@ -84,6 +84,12 @@ class KleeMinty:
 		self.C = self.get_function_km(n)
 		self.A, self.b = self.get_constraints_km(n)
 	
+	def __repr__(self):
+		return str(self.A) + "\n" + str(self.b) + "\n" + str(self.C)
+	
+	def __str__(self):
+		return str(self.A) + "\n" + str(self.b) + "\n" + str(self.C)
+	
 	@staticmethod
 	def get_function_km(n):
 		function = [0 for i in range(n)]
@@ -103,17 +109,15 @@ class KleeMinty:
 			b.append(100**(i-1))
 		return np.array(constraints), np.array(b)
 	
-	def pdata(self):
-		return self.A, self.b, self.C
-	
 	def solve(self):
 		return LP.simplex_solver(self)
-	
 
+	
 if __name__ == "__main__":
-	print(KleeMinty(3).pdata())
+	kl = KleeMinty(3)
+	print(kl)
 	start_time = time.time()
-	res = KleeMinty(3).solve()
+	res = kl.solve()
 	print("--- %s seconds ---" % (time.time() - start_time))
 	print(res)
 	print('Optimal value:', res.fun, '\nX:', res.x)

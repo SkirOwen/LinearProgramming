@@ -123,7 +123,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582727444355</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="klee minty finish and solver&#10;need to check solver!!!!!">
+      <created>1582913026424</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1582913026424</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -141,7 +148,8 @@
     <MESSAGE value="implement implicit multiplication for A and b" />
     <MESSAGE value="implement implicit multiplication for A and b&#10;time the class" />
     <MESSAGE value="simplex plus creation of Klee Minty" />
-    <option name="LAST_COMMIT_MESSAGE" value="simplex plus creation of Klee Minty" />
+    <MESSAGE value="klee minty finish and solver&#10;need to check solver!!!!!" />
+    <option name="LAST_COMMIT_MESSAGE" value="klee minty finish and solver&#10;need to check solver!!!!!" />
   </component>
   <component name="WindowStateProjectService">
     <state x="313" y="55" width="810" height="692" key="#Python" timestamp="1582372528392">
@@ -152,10 +160,14 @@
       <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state x="176" y="48" width="1084" height="720" key="#com.intellij.execution.impl.EditConfigurationsDialog/70.27.1296.741@70.27.1296.741" timestamp="1582223155868" />
-    <state x="322" y="27" width="782" height="741" key="CommitChangelistDialog2" timestamp="1582727443457">
+    <state x="401" y="125" width="624" height="551" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1583143049788">
       <screen x="70" y="27" width="1296" height="741" />
     </state>
-    <state x="322" y="27" width="782" height="741" key="CommitChangelistDialog2/70.27.1296.741@70.27.1296.741" timestamp="1582727443457" />
+    <state x="401" y="125" width="624" height="551" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/70.27.1296.741@70.27.1296.741" timestamp="1583143049788" />
+    <state x="322" y="27" width="782" height="741" key="CommitChangelistDialog2" timestamp="1582913025144">
+      <screen x="70" y="27" width="1296" height="741" />
+    </state>
+    <state x="322" y="27" width="782" height="741" key="CommitChangelistDialog2/70.27.1296.741@70.27.1296.741" timestamp="1582913025144" />
     <state width="731" height="540" key="DebuggerActiveHint" timestamp="1582912018047">
       <screen x="70" y="27" width="1296" height="741" />
     </state>
@@ -164,22 +176,22 @@
       <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state x="170" y="127" width="1096" height="541" key="DiffContextDialog/70.27.1296.741@70.27.1296.741" timestamp="1582672928903" />
-    <state width="1250" height="172" key="GridCell.Tab.0.bottom" timestamp="1582912799534">
+    <state width="1250" height="172" key="GridCell.Tab.0.bottom" timestamp="1583147071900">
       <screen x="70" y="27" width="1296" height="741" />
     </state>
-    <state width="1250" height="172" key="GridCell.Tab.0.bottom/70.27.1296.741@70.27.1296.741" timestamp="1582912799534" />
-    <state width="1250" height="172" key="GridCell.Tab.0.center" timestamp="1582912799533">
+    <state width="1250" height="172" key="GridCell.Tab.0.bottom/70.27.1296.741@70.27.1296.741" timestamp="1583147071900" />
+    <state width="1250" height="172" key="GridCell.Tab.0.center" timestamp="1583147071900">
       <screen x="70" y="27" width="1296" height="741" />
     </state>
-    <state width="1250" height="172" key="GridCell.Tab.0.center/70.27.1296.741@70.27.1296.741" timestamp="1582912799533" />
-    <state width="1250" height="172" key="GridCell.Tab.0.left" timestamp="1582912799533">
+    <state width="1250" height="172" key="GridCell.Tab.0.center/70.27.1296.741@70.27.1296.741" timestamp="1583147071900" />
+    <state width="1250" height="172" key="GridCell.Tab.0.left" timestamp="1583147071899">
       <screen x="70" y="27" width="1296" height="741" />
     </state>
-    <state width="1250" height="172" key="GridCell.Tab.0.left/70.27.1296.741@70.27.1296.741" timestamp="1582912799533" />
-    <state width="1250" height="172" key="GridCell.Tab.0.right" timestamp="1582912799533">
+    <state width="1250" height="172" key="GridCell.Tab.0.left/70.27.1296.741@70.27.1296.741" timestamp="1583147071899" />
+    <state width="1250" height="172" key="GridCell.Tab.0.right" timestamp="1583147071900">
       <screen x="70" y="27" width="1296" height="741" />
     </state>
-    <state width="1250" height="172" key="GridCell.Tab.0.right/70.27.1296.741@70.27.1296.741" timestamp="1582912799533" />
+    <state width="1250" height="172" key="GridCell.Tab.0.right/70.27.1296.741@70.27.1296.741" timestamp="1583147071900" />
     <state width="1250" height="215" key="GridCell.Tab.1.bottom" timestamp="1582912057478">
       <screen x="70" y="27" width="1296" height="741" />
     </state>
