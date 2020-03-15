@@ -1,4 +1,6 @@
 import lp
+import matplotlib.pyplot as plt
+import pulp
 
 import inspect
 import itertools as it

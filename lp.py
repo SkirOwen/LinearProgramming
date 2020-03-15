@@ -33,7 +33,8 @@ class LP:
 		# self.cn
 	
 	def simplex_solver(self):
-		res = linprog(self.C, A_ub=self.A, b_ub=self.b, bounds=(0, None))
+		res = linprog(self.C, method='revised Simplex', A_ub=self.A, b_ub=self.b, bounds=(0, None),
+							options={"tol": 1e-24, "maxiter": 10**10})
 		return res
 	
 	@staticmethod
@@ -79,10 +80,19 @@ class LP:
 	
 	
 class KleeMinty:
-	def __init__(self, n, minmax="max", **kwargs):
+	def __init__(self, n, minmax="max", variable_change=False, **kwargs):
 		self.minmax = minmax
 		self.C = self.get_function_km(n)
 		self.A, self.b = self.get_constraints_km(n)
+		if variable_change:
+			self.A, self.C = self.variable_change()
+		
+	def variable_change(self):
+		for i in range(len(self.A)):
+			for j in range(len(self.A[0])):
+				self.A[i][j] = 100**i * self.A[i][j]
+				self.C[j] = 100**i * self.C[j]
+		return self.A, self.C
 	
 	def __repr__(self):
 		return str(self.A) + "\n" + str(self.b) + "\n" + str(self.C)
@@ -114,14 +124,43 @@ class KleeMinty:
 
 	
 if __name__ == "__main__":
-	kl = KleeMinty(3)
-	print(kl)
+	'''i = 3
+	kl = KleeMinty(i)
+	# print(kl)
 	start_time = time.time()
 	res = kl.solve()
-	print("--- %s seconds ---" % (time.time() - start_time))
-	print(res)
-	print('Optimal value:', res.fun, '\nX:', res.x)
+	end_time = time.time()
+	print(kl)
+	print("--- %s seconds ---" % (end_time - start_time))
+	print("i = ", i)
 	'''
+	n = 22
+	value = []
+	for i in range(1, n+1):     # for 1..n
+		kl = KleeMinty(i, variable_change=False)
+		# print(kl)
+		start_time = time.time()
+		res = kl.solve()
+		end_time = time.time()
+		value.append(end_time - start_time)
+		print("--- %s seconds ---" % (end_time - start_time))
+		print("i = ", i)
+		# print(res)
+		# print('Optimal value:', res.fun, '\nX:', res.x)
+	
+	for k in range(n):
+		print("(", k, ",", value[k], ")")
+	
+	for k in range(n):
+		print(k, "&", value[k], "\\\\")
+		
+	
+	'''X = [x for x in range(1, len(value)+1)]
+	Y = [x for x in value]
+	plt.figure(figsize=[8.16, 8.16])
+	plt.scatter(X, Y, color='red', s=1)
+	plt.show()
+	
 	start_time = time.time()
 	lp = LP("max", "x+y", ["x+2*y<=2", "3*x+y<=3/2"])
 	print("--- %s seconds ---" % (time.time() - start_time))
