@@ -1,11 +1,12 @@
 from pulp import *
 
-x = LpVariable("x", 0, 3)
-y = LpVariable("y", 0, 1)
+x = LpVariable("x", 0)
+y = LpVariable("y", 0)
 
 prob = LpProblem("myProblem", LpMinimize)
-prob += x + y <= 2
-prob += -4*x + y
+prob += -8*x-5*y
+prob += x + y <= 6
+prob += 9*x+5*y <= 45
 
 status = prob.solve()
 

@@ -8,7 +8,7 @@ class LP:
 		if dim <= 3:
 			chars = sp.symbols("x, y, z")[:dim]
 		else:
-			chars = sp.symbols('x0:{}'.format(dim))
+			chars = sp.symbols('x1:{}'.format(dim+1))
 			
 		constraints = self.programming_form(constraints)
 		while True:
@@ -47,11 +47,11 @@ class LP:
 			k = equation.index("=")
 			if equation[k-1] == "<" or equation[k-1] == ">":
 				bias = 1
-				if equation[k] == ">":
+				if equation[k-1] == ">":
 					scalar = -1
 			rhs = equation[:k - bias]
 			lhs = equation[k + bias:]
-			while True:
+			while True:     # TODO: debug when >=
 				try:
 					rhs = sp.sympify(rhs)
 					lhs = sp.sympify(lhs)
@@ -90,8 +90,8 @@ class KleeMinty:
 	def variable_change(self):
 		for i in range(len(self.A)):
 			for j in range(len(self.A[0])):
-				self.A[i][j] = 100**i * self.A[i][j]
-				self.C[j] = 100**i * self.C[j]
+				self.A[i][j] = 100**(- j) * self.A[i][j]
+				self.C[j] = 100**(- j) * self.C[j]
 		return self.A, self.C
 	
 	def __repr__(self):
@@ -134,10 +134,10 @@ if __name__ == "__main__":
 	print("--- %s seconds ---" % (end_time - start_time))
 	print("i = ", i)
 	'''
-	n = 22
+	n = 154
 	value = []
 	for i in range(1, n+1):     # for 1..n
-		kl = KleeMinty(i, variable_change=False)
+		kl = KleeMinty(i, variable_change=True)
 		# print(kl)
 		start_time = time.time()
 		res = kl.solve()
@@ -153,7 +153,6 @@ if __name__ == "__main__":
 	
 	for k in range(n):
 		print(k, "&", value[k], "\\\\")
-		
 	
 	'''X = [x for x in range(1, len(value)+1)]
 	Y = [x for x in value]
