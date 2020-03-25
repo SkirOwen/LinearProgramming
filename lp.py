@@ -153,6 +153,9 @@ if __name__ == "__main__":
 	
 	for k in range(n):
 		print(k, "&", value[k], "\\\\")
+		
+	for k in range(n):
+		print(k, " ", value[k]**2)
 	
 	'''X = [x for x in range(1, len(value)+1)]
 	Y = [x for x in value]

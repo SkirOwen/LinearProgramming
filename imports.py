@@ -1,6 +1,7 @@
 import lp
 import matplotlib.pyplot as plt
 import pulp
+import pandas as pd
 
 import inspect
 import itertools as it
