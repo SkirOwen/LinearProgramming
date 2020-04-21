@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="91185a7f-9d35-40b3-ab64-e7123247b020" name="Default Changelist" comment="" />
+    <list default="true" id="91185a7f-9d35-40b3-ab64-e7123247b020" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/electoral_college.py" beforeDir="false" afterPath="$PROJECT_DIR$/electoral_college.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FavoritesManager">
-    <favorites_list name="LinearProgramming" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -215,7 +215,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587467395898</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="add dataset census 2016">
+      <created>1587467592239</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1587467592239</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -258,12 +265,12 @@
       <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state x="401" y="125" width="624" height="551" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/70.27.1296.741@70.27.1296.741" timestamp="1583143049788" />
-    <state x="430" y="27" width="782" height="937" key="CommitChangelistDialog2" timestamp="1587467395717">
+    <state x="430" y="27" width="807" height="871" key="CommitChangelistDialog2" timestamp="1587467591975">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state x="322" y="27" width="782" height="741" key="CommitChangelistDialog2/70.27.1296.741@70.27.1296.741" timestamp="1584283997911" />
     <state x="430" y="27" width="782" height="937" key="CommitChangelistDialog2/70.27.1850.1053/1920.191.1366.768@70.27.1850.1053" timestamp="1585135868299" />
-    <state x="430" y="27" key="CommitChangelistDialog2/70.27.1850.1053/1920.312.1366.768@70.27.1850.1053" timestamp="1587467395717" />
+    <state x="430" y="27" width="807" height="871" key="CommitChangelistDialog2/70.27.1850.1053/1920.312.1366.768@70.27.1850.1053" timestamp="1587467591975" />
     <state width="731" height="540" key="DebuggerActiveHint" timestamp="1582912018047">
       <screen x="70" y="27" width="1296" height="741" />
     </state>
@@ -330,20 +337,21 @@
       <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state x="207" y="31" width="1022" height="737" key="SettingsEditor/70.27.1296.741@70.27.1296.741" timestamp="1583934663372" />
-    <state x="590" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1587467404946">
+    <state x="590" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1587467756007">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state x="590" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2/70.27.1850.1053/1920.191.1366.768@70.27.1850.1053" timestamp="1584552556951" />
-    <state x="590" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2/70.27.1850.1053/1920.312.1366.768@70.27.1850.1053" timestamp="1587467404946" />
+    <state x="590" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2/70.27.1850.1053/1920.312.1366.768@70.27.1850.1053" timestamp="1587467756007" />
     <state width="927" height="526" key="XDebugger.FullValuePopup" timestamp="1584543796878">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state width="649" height="370" key="XDebugger.FullValuePopup/70.27.1296.741@70.27.1296.741" timestamp="1582724878197" />
     <state width="927" height="526" key="XDebugger.FullValuePopup/70.27.1850.1053/1920.191.1366.768@70.27.1850.1053" timestamp="1584543796878" />
-    <state x="486" y="317" width="464" height="167" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1582481401506">
-      <screen x="70" y="27" width="1296" height="741" />
+    <state x="664" y="439" width="464" height="167" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1587467532673">
+      <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state x="486" y="317" width="464" height="167" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/70.27.1296.741@70.27.1296.741" timestamp="1582481401506" />
+    <state x="664" y="439" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/70.27.1850.1053/1920.312.1366.768@70.27.1850.1053" timestamp="1587467532673" />
     <state x="268" y="85" width="890" height="631" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1582472755274">
       <screen x="70" y="27" width="1296" height="741" />
     </state>
@@ -352,6 +360,10 @@
       <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state x="93" y="176" width="1119" height="497" key="dock-window-1/70.27.1296.741@70.27.1296.741" timestamp="1583935904273" />
+    <state x="722" y="453" width="535" height="207" key="git4idea.ui.GitStashDialog" timestamp="1587467629148">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state x="722" y="453" width="535" height="207" key="git4idea.ui.GitStashDialog/70.27.1850.1053/1920.312.1366.768@70.27.1850.1053" timestamp="1587467629148" />
     <state x="514" y="115" width="960" height="964" key="search.everywhere.popup" timestamp="1585134975053">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
