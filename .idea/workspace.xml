@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="91185a7f-9d35-40b3-ab64-e7123247b020" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/electoral_college.py" beforeDir="false" afterPath="$PROJECT_DIR$/electoral_college.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -205,7 +204,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585133313909</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="add dataset census 2016">
+      <created>1585135868709</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1585135868709</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -247,11 +253,11 @@
       <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state x="401" y="125" width="624" height="551" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/70.27.1296.741@70.27.1296.741" timestamp="1583143049788" />
-    <state x="430" y="27" width="782" height="937" key="CommitChangelistDialog2" timestamp="1585133313502">
+    <state x="430" y="27" width="782" height="937" key="CommitChangelistDialog2" timestamp="1585135868299">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state x="322" y="27" width="782" height="741" key="CommitChangelistDialog2/70.27.1296.741@70.27.1296.741" timestamp="1584283997911" />
-    <state x="430" y="27" width="782" height="937" key="CommitChangelistDialog2/70.27.1850.1053/1920.191.1366.768@70.27.1850.1053" timestamp="1585133313502" />
+    <state x="430" y="27" width="782" height="937" key="CommitChangelistDialog2/70.27.1850.1053/1920.191.1366.768@70.27.1850.1053" timestamp="1585135868299" />
     <state width="731" height="540" key="DebuggerActiveHint" timestamp="1582912018047">
       <screen x="70" y="27" width="1296" height="741" />
     </state>
@@ -270,26 +276,26 @@
     </state>
     <state x="536" y="292" width="353" height="217" key="Github.ShareDialog/70.27.1296.741@70.27.1296.741" timestamp="1584284024802" />
     <state x="735" y="404" key="Github.ShareDialog/70.27.1850.1053/1920.191.1366.768@70.27.1850.1053" timestamp="1584552545739" />
-    <state width="1827" height="300" key="GridCell.Tab.0.bottom" timestamp="1585135099443">
+    <state width="1827" height="300" key="GridCell.Tab.0.bottom" timestamp="1585295717839">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state width="1273" height="189" key="GridCell.Tab.0.bottom/70.27.1296.741@70.27.1296.741" timestamp="1584311628090" />
-    <state width="1827" height="300" key="GridCell.Tab.0.bottom/70.27.1850.1053/1920.191.1366.768@70.27.1850.1053" timestamp="1585135099443" />
-    <state width="1827" height="300" key="GridCell.Tab.0.center" timestamp="1585135099443">
+    <state width="1827" height="300" key="GridCell.Tab.0.bottom/70.27.1850.1053/1920.191.1366.768@70.27.1850.1053" timestamp="1585295717839" />
+    <state width="1827" height="300" key="GridCell.Tab.0.center" timestamp="1585295717839">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state width="1273" height="189" key="GridCell.Tab.0.center/70.27.1296.741@70.27.1296.741" timestamp="1584311628089" />
-    <state width="1827" height="300" key="GridCell.Tab.0.center/70.27.1850.1053/1920.191.1366.768@70.27.1850.1053" timestamp="1585135099443" />
-    <state width="1827" height="300" key="GridCell.Tab.0.left" timestamp="1585135099443">
+    <state width="1827" height="300" key="GridCell.Tab.0.center/70.27.1850.1053/1920.191.1366.768@70.27.1850.1053" timestamp="1585295717839" />
+    <state width="1827" height="300" key="GridCell.Tab.0.left" timestamp="1585295717839">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state width="1273" height="189" key="GridCell.Tab.0.left/70.27.1296.741@70.27.1296.741" timestamp="1584311628089" />
-    <state width="1827" height="300" key="GridCell.Tab.0.left/70.27.1850.1053/1920.191.1366.768@70.27.1850.1053" timestamp="1585135099443" />
-    <state width="1827" height="300" key="GridCell.Tab.0.right" timestamp="1585135099443">
+    <state width="1827" height="300" key="GridCell.Tab.0.left/70.27.1850.1053/1920.191.1366.768@70.27.1850.1053" timestamp="1585295717839" />
+    <state width="1827" height="300" key="GridCell.Tab.0.right" timestamp="1585295717839">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state width="1273" height="189" key="GridCell.Tab.0.right/70.27.1296.741@70.27.1296.741" timestamp="1584311628089" />
-    <state width="1827" height="300" key="GridCell.Tab.0.right/70.27.1850.1053/1920.191.1366.768@70.27.1850.1053" timestamp="1585135099443" />
+    <state width="1827" height="300" key="GridCell.Tab.0.right/70.27.1850.1053/1920.191.1366.768@70.27.1850.1053" timestamp="1585295717839" />
     <state width="1827" height="339" key="GridCell.Tab.1.bottom" timestamp="1584626125129">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
