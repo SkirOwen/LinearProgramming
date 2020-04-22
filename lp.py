@@ -79,8 +79,9 @@ class LP:
 		return equation
 	
 	
-class KleeMinty:
-	def __init__(self, n, minmax="max", variable_change=False, **kwargs):
+class KleeMinty(LP):
+	def __init__(self, n, function, constraints, minmax="max", variable_change=False, **kwargs):
+		super().__init__(minmax, function, constraints, **kwargs)
 		self.minmax = minmax
 		self.C = self.get_function_km(n)
 		self.A, self.b = self.get_constraints_km(n)
