@@ -24,8 +24,7 @@ a_b = {}
 u = pulp.LpVariable("u", 0)
 v = pulp.LpVariable("v", 0)
 a = pulp.LpVariable.dicts('a', (i for i in range(51)), lowBound=3, upBound=538-(50*3), cat=pulp.LpInteger)
-# for i in range(51):
-#     a_b[i] = pulp.lpSum([a[i] * int(df.iloc[i, 1])])
+
 
 prob = pulp.LpProblem("Electoral_College", pulp.LpMinimize)
 
@@ -33,12 +32,14 @@ prob += u - v
 
 for i in range(len(df)-1):
     # prob += v <= a_b[i]
-    prob += v <= a[i] * (int(df.iloc[i, 1]))**-1
-    prob += u >= a[i] * (int(df.iloc[i, 1]))**-1
+    prob += a[i] * 1000000/(float(df.iloc[i, 1])) >= v
+    prob += a[i] * 1000000/(float(df.iloc[i, 1])) <= u
 
-    prob += pulp.lpSum(a[j] for j in range(len(a))) == n
+prob += pulp.lpSum(a[j] for j in range(len(a))) == n
 
 prob.solve()
+
+print(pulp.LpStatus[prob.solve()], "\n")
 
 print("u = ", pulp.value(u), "\n v = ", pulp.value(v))
 print("u-v = ", pulp.value(u) - pulp.value(v))
@@ -54,3 +55,16 @@ for i in range(51):
         print("{0:20} {1}".format(df.iloc[i, 0], ("yep", df.iloc[i, 3], " -> ", pulp.value(a[i]))))
     else:
         print("\33[31m", "{0:20} {1}".format(df.iloc[i, 0], (df.iloc[i, 3], " -> ", pulp.value(a[i]))), "\33[0m")
+
+old = [df.iloc[i, 3] / int(df.iloc[i, 1]) for i in range(51)]
+print("min = ", min(old), "\n max = ", max(old))
+print("max - min = ", max(old) - min(old))
+
+print("-----------------------------------------------------")
+new = [pulp.value(a[i]) / int(df.iloc[i, 1]) for i in range(51)]
+print("min = ", min(new), "\n max = ", max(new))
+print("max - min = ", max(new) - min(new))
+
+print("-----------------------------------------------------")
+print("max i = ", old.index(max(old)), "min i = ", old.index(min(old)))
+print("max i = ", new.index(max(new)), "min i = ", new.index(min(new)))
